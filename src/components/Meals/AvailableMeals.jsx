@@ -12,7 +12,7 @@ const AvailableMeals = () => {
     const fetchMeals = async () => {
       setIsLoading(true);
       const response = await fetch(
-        "https://food-order-async-default-rtdb.firebaseio.com/meals.json"
+        "Your Firebase Link Goes Here"
       );
 
       if (!response.ok) {
@@ -31,11 +31,7 @@ const AvailableMeals = () => {
           price: responseData[key].price,
         });
       }
-{/*after the component loaded for the first time, and therefore, initially, 
-there will be no data, and we wanna update the component once the data is there.
-Now, when we have data that changes and where a component should be re-evaluated
-once it did change, whenever we have a use case like this, we need state. So we should 
-also import useState here from react*/}
+
       setMeals(loadedMeals);
       setIsLoading(false);
     };
